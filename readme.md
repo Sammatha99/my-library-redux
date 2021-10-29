@@ -11,9 +11,9 @@
 1. `core.js`: main library, stores 2 important components
    - Template html engine: helps create html faster, can be reused
    - CreateStore:
-     a. creating store with initial state by using reducer()
-     b. roots: helps connect html(root) with component(), then render the innerHTML inside it (root.innerHTML = component())
-     c. methods/functions: were carefully explained in each file
+      * creating store with initial state by using reducer()
+      * roots: helps connect html(root) with component(), then render the innerHTML inside it (root.innerHTML = component())
+       * methods/functions: were carefully explained in each file
 2. `reducer.js`: depending on the application to rebuild actions, initstate, ... more suitable.
 3. `store.js`: main store
 4. `app.js: manages component(), had connected with store through connect(<state truyền vào nếu cần>) => return html
