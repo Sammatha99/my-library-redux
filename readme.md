@@ -1,29 +1,29 @@
-# Tự code thư viện build ui
+# Impletation library to help build UI
 
-**Học cách tạo tay một thư viện quản lý cập nhật ui khi có thay đổi dữ liệu, hoạt động như redux trong reactjs**
+**Learning and practicing how to self-building a library to manage/update UI when data changes, works like redux in ReactJS**
 
 <p  align="center">
 <img src="https://blog.itnavi.com.vn/uploads/2021/04/Redux-l%C3%A0-g%C3%AC-2.jpg" width="70%"/>
 </p>
 
-### ghi chú
+### Notes:
 
-1. `core.js`: thư viện chính, lưu trữ 2 thành phần quan trọng
-   - Template html engine: create html nhanh hơn, tái sử dụng được
+1. `core.js`: main library, stores 2 important components
+   - Template html engine: helps create html faster, can be reused
    - CreateStore:
-     a. Tạo ra store với state init ban đầu thông qua reducer()
-     b. roots: kết nối các thành phần html(root) với component() render ra innerHTML trong nó (root.innerHTML = component())
-     c. Các hàm: được giải thích kỹ trong file
-2. `reducer.js`: tùy ứng dụng mà viết lại các actions, initstate, ...
-3. `store.js`: này là store chính thức của ứng dụng
-4. `app.js`: quản lý các component(), đã kết nối với store thông qua connect(<state truyền vào nếu cần>) => trả ra html
-5. `script.js`: kết nối các component() với thành phần html (root) bên ngoài
+     a. creating store with initial state by using reducer()
+     b. roots: helps connect html(root) with component(), then render the innerHTML inside it (root.innerHTML = component())
+     c. methods/functions: were carefully explained in each file
+2. `reducer.js`: depending on the application to rebuild actions, initstate, ... more suitable.
+3. `store.js`: main store
+4. `app.js: manages component(), had connected with store through connect(<state truyền vào nếu cần>) => return html
+5. `script.js`: helps connect component() with outside html (root)
 
-### khả năng tái sử dụng
+### Reusability
 
-- như giải thích ở trên, `core.js` là thư viện chính
-- các file còn lại `store.js, app.js, script.js, và reducer.js` sẽ được tạo ra tùy theo ứng dụng đang dùng, nhưng cấu trúc tạo vẫn như trên
+- `core.js` is main library, just copy-paste and use it.
+- You have to rebuild Remaining files base on your need, but the structure still the same.
 
-### kham thảo thêm
+### Reference
 
 https://itnavi.com.vn/blog/redux-la-gi/
