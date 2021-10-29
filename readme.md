@@ -16,7 +16,7 @@
        * methods/functions: were carefully explained in each file
 2. `reducer.js`: depending on the application to rebuild actions, initstate, ... more suitable.
 3. `store.js`: main store
-4. `app.js: manages component(), had connected with store through connect(<state truyền vào nếu cần>) => return html
+4. `app.js`: manages component(), had connected with store through connect(<state truyền vào nếu cần>) => return html
 5. `script.js`: helps connect component() with outside html (root)
 
 ### Reusability
